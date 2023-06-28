@@ -25,7 +25,7 @@ The following use-cases involving F5 WAF solutions are currently supported by Po
 
 Using Policy Supervisor standard workflow or the direct conversion utility you can quickly import and convert a WAF policy file *from* the following F5 WAF solutions:
 
-- *BIG-IP Advanced WAF (AWAF)*: JSON or XML format that has been exported from the following versions of AWAF: v13, v14, v15, v16, v17 
+- *BIG-IP Advanced WAF (AWAF)*: JSON or XML format that has been exported from the following versions of AWAF: v13.X, v14, v15, v16, v17 
 - *NGINX App Protect (NAP)*: policy in the JSON format from the following versions of NAP: 
 
 **Policy Ingest From Provider**:
@@ -39,7 +39,7 @@ The standard workload within Policy Supervisor supports connecting to and ingest
 
 The standard workload within Policy Supervisor supports connecting to and deploying Policies as well as attaching them to applications for immediate protection for the following solutions (and features):
 
-- `*F5 Distributed Cloud Services* <https://f5.com/cloud/waap>`_ (XC): WAF, Bot, DoS
+- `*F5 Distributed Cloud Services* <https://f5.com/waap>`_ (XC): WAF, Bot, DoS
 
 - *BIG-IP Advanced WAF (AWAF) versions 16 and 17*: WAF, Bot, DoS
 - *NGINX App Protect (NAP) version*: WAF
@@ -48,7 +48,7 @@ The standard workload within Policy Supervisor supports connecting to and deploy
 
 Using Policy Supervisor standard workflow or the direct conversion utility you can quickly convert & export a WAF policy file *to* the following F5 WAF solutions:
 
-- `*F5 Distributed Cloud Services* <https://f5.com/cloud/waap>`_: WAF
+- `*F5 Distributed Cloud Services* <https://f5.com/waap>`_: WAF
 - *BIG-IP Advanced WAF (AWAF) versions 16 and 17*: WAF
 - *NGINX App Protect (NAP) version*: WAF
 
