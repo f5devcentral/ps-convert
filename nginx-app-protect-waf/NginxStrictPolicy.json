@@ -1,0 +1,278 @@
+{
+   "policy" : {
+      "name" : "app_protect_strict_policy",
+      "description" : "NGINX App Protect Strict Policy",
+      "template": {
+        "name": "POLICY_TEMPLATE_NGINX_BASE"
+      },
+      "blocking-settings" : {
+         "evasions" : [
+            {
+               "description" : "Multiple decoding",
+               "maxDecodingPasses" : 2
+            }
+         ],
+         "http-protocols" : [
+            {
+               "description" : "Check maximum number of headers",
+               "maxHeaders" : 20
+            },
+            {
+               "description" : "Body in GET or HEAD requests",
+               "enabled" : true
+            },
+            {
+               "description" : "POST request with Content-Length: 0",
+               "enabled" : true
+            },
+            {
+               "description" : "Header name with no header value",
+               "enabled" : true
+            }
+         ],
+         "violations" : [
+            {
+               "block" : true,
+               "description" : "Disallowed file upload content detected in body",
+               "name" : "VIOL_FILE_UPLOAD_IN_BODY"
+            },
+            {
+               "block" : true,
+               "description" : "Violation Rating Need Examination detected",
+               "name" : "VIOL_RATING_NEED_EXAMINATION"
+            },
+            {
+               "block" : true,
+               "description" : "Mandatory request body is missing",
+               "name" : "VIOL_MANDATORY_REQUEST_BODY"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal parameter location",
+               "name" : "VIOL_PARAMETER_LOCATION"
+            },
+            {
+               "block" : true,
+               "description" : "Mandatory parameter is missing",
+               "name" : "VIOL_MANDATORY_PARAMETER"
+            },
+            {
+               "block" : true,
+               "description" : "JSON data does not comply with JSON schema",
+               "name" : "VIOL_JSON_SCHEMA"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal parameter array value",
+               "name" : "VIOL_PARAMETER_ARRAY_VALUE"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal Base64 value",
+               "name" : "VIOL_PARAMETER_VALUE_BASE64"
+            },
+            {
+               "block" : true,
+               "description" : "Disallowed file upload content detected",
+               "name" : "VIOL_FILE_UPLOAD"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal request content type",
+               "name" : "VIOL_URL_CONTENT_TYPE"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal HTTP status in response",
+               "name" : "VIOL_HTTP_RESPONSE_STATUS"
+            },
+            {
+               "block" : true,
+               "description" : "Modified domain cookie(s)",
+               "name" : "VIOL_COOKIE_MODIFIED"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal static parameter value",
+               "name" : "VIOL_PARAMETER_STATIC_VALUE"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal parameter value length",
+               "name" : "VIOL_PARAMETER_VALUE_LENGTH"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal parameter data type",
+               "name" : "VIOL_PARAMETER_DATA_TYPE"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal parameter numeric value",
+               "name" : "VIOL_PARAMETER_NUMERIC_VALUE"
+            },
+            {
+               "block" : true,
+               "description" : "Parameter value does not comply with regular expression",
+               "name" : "VIOL_PARAMETER_VALUE_REGEXP"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal file type",
+               "name" : "VIOL_FILETYPE"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal URL",
+               "name" : "VIOL_URL"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal method",
+               "name" : "VIOL_METHOD"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal parameter",
+               "name" : "VIOL_PARAMETER"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal empty parameter value",
+               "name" : "VIOL_PARAMETER_EMPTY_VALUE"
+            },
+            {
+               "block" : true,
+               "description" : "Null in multi-part parameter value",
+               "name" : "VIOL_PARAMETER_MULTIPART_NULL_VALUE"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal repeated parameter name",
+               "name" : "VIOL_PARAMETER_REPEATED"
+            },
+            {
+               "block" : true,
+               "description" : "Evasion technique detected",
+               "name" : "VIOL_EVASION"
+            },
+            {
+               "block" : true,
+               "description" : "Request length exceeds defined buffer size",
+               "name" : "VIOL_REQUEST_MAX_LENGTH"
+            },
+            {
+               "block" : true,
+               "description" : "Illegal gRPC method",
+               "name" : "VIOL_GRPC_METHOD"
+            }
+         ]
+      },
+      "cookies" : [
+         {
+            "name" : "*",
+            "type" : "wildcard",
+            "enforcementType" : "allow",
+            "insertSameSiteAttribute" : "lax",
+            "securedOverHttpsConnection" : true
+         }
+      ],
+      "data-guard" : {
+         "enabled" : true
+      },
+      "filetypes" : [
+         {
+            "name" : "*",
+            "type" : "wildcard",
+            "allowed" : true,
+            "responseCheck" : true
+         }
+      ],
+      "json-profiles" : [
+         {
+            "name" : "Default",
+            "defenseAttributes" : {
+               "tolerateJSONParsingWarnings" : false,
+               "maximumTotalLengthOfJSONData": "10000"               
+            }
+         }
+      ],
+      "signature-sets" : [
+         {
+            "alarm" : true,
+            "block" : false,
+            "name" : "HTTP Response Splitting Signatures"
+         },
+         {
+            "alarm" : true,
+            "block" : false,
+            "name" : "Server Side Code Injection Signatures"
+         },
+         {
+            "alarm" : true,
+            "block" : false,
+            "name" : "Information Leakage Signatures"
+         },
+         {
+            "alarm" : true,
+            "block" : false,
+            "name" : "Other Application Attacks Signatures"
+         },
+         {
+            "alarm" : true,
+            "block" : false,
+            "name" : "Generic Detection Signatures (High/Medium Accuracy)"
+         }
+      ],
+      "urls" : [
+         {
+            "name" : "*",
+            "type" : "wildcard",
+            "method" : "*",
+            "isAllowed" : true,
+            "disallowFileUploadOfExecutables" : true
+         }
+      ],
+      "xml-profiles" : [
+         {
+            "name" : "Default",
+            "defenseAttributes" : {
+               "allowCDATA" : false,
+               "allowDTDs" : false,
+               "allowExternalReferences" : false,
+               "allowProcessingInstructions" : true,
+               "maximumAttributeValueLength" : 1024,
+               "maximumAttributesPerElement" : 16,
+               "maximumChildrenPerElement" : 1024,
+               "maximumDocumentDepth" : 32,
+               "maximumDocumentSize" : 1024000,
+               "maximumElements" : 65536,
+               "maximumNSDeclarations" : 64,
+               "maximumNameLength" : 256,
+               "maximumNamespaceLength" : 256,
+               "tolerateCloseTagShorthand" : false,
+               "tolerateLeadingWhiteSpace" : false,
+               "tolerateNumericNames" : false
+            }
+         }
+      ],
+      "graphql-profiles": [
+         {
+           "name": "Default",
+           "responseEnforcement": {
+             "blockDisallowedPatterns": true
+           }
+         }
+       ],
+      "bot-defense": {
+        "mitigations": {
+            "classes": [
+                {
+                    "name": "untrusted-bot",
+                    "action": "alarm"
+                }
+            ]
+        }
+      }
+   }
+}
