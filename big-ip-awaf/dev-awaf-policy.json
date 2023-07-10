@@ -36,22 +36,22 @@
          "evasions" : [
             {
                "description" : "Bad unescape",
-               "enabled" : false,
+               "enabled" : true,
                "learn" : true
             },
             {
                "description" : "Apache whitespace",
-               "enabled" : false,
+               "enabled" : true,
                "learn" : true
             },
             {
                "description" : "Bare byte decoding",
-               "enabled" : false,
+               "enabled" : true,
                "learn" : true
             },
             {
                "description" : "IIS Unicode codepoints",
-               "enabled" : false,
+               "enabled" : true,
                "learn" : true
             },
             {
@@ -118,7 +118,7 @@
             },
             {
                "description" : "Content length should be a positive number",
-               "enabled" : false,
+               "enabled" : true,
                "learn" : true
             },
             {
@@ -128,32 +128,32 @@
             },
             {
                "description" : "CRLF characters before request start",
-               "enabled" : false,
+               "enabled" : true,
                "learn" : true
             },
             {
                "description" : "No Host header in HTTP/1.1 request",
-               "enabled" : false,
+               "enabled" : true,
                "learn" : true
             },
             {
                "description" : "Bad multipart parameters parsing",
-               "enabled" : false,
+               "enabled" : true,
                "learn" : true
             },
             {
                "description" : "Bad multipart/form-data request parsing",
-               "enabled" : false,
+               "enabled" : true,
                "learn" : true
             },
             {
                "description" : "Body in GET or HEAD requests",
-               "enabled" : false,
+               "enabled" : true,
                "learn" : true
             },
             {
                "description" : "Chunked request with Content-Length header",
-               "enabled" : false,
+               "enabled" : true,
                "learn" : true
             },
             {
@@ -163,12 +163,12 @@
             },
             {
                "description" : "Header name with no header value",
-               "enabled" : false,
+               "enabled" : true,
                "learn" : true
             },
             {
                "description" : "POST request with Content-Length: 0",
-               "enabled" : false,
+               "enabled" : true,
                "learn" : true
             }
          ],
@@ -2121,189 +2121,6 @@
             "alarm" : true,
             "block" : true,
             "learn" : true,
-            "name" : "MySQL Signatures (High/Medium Accuracy)",
-            "signatureSet" : {
-               "filter" : {
-                  "accuracyFilter" : "ge",
-                  "accuracyValue" : "medium",
-                  "hasCve" : "all",
-                  "lastUpdatedFilter" : "all",
-                  "riskFilter" : "all",
-                  "riskValue" : "all",
-                  "signatureType" : "all",
-                  "tagFilter" : "all",
-                  "userDefinedFilter" : "all"
-               },
-               "systems" : [
-                  {
-                     "name" : "MySQL"
-                  }
-               ],
-               "type" : "filter-based"
-            }
-         },
-         {
-            "alarm" : true,
-            "block" : true,
-            "learn" : true,
-            "name" : "SSRF",
-            "signatureSet" : {
-               "signatures" : [
-                  {
-                     "signatureId" : "200004757"
-                  },
-                  {
-                     "signatureId" : "200014005"
-                  },
-                  {
-                     "signatureId" : "200017001"
-                  },
-                  {
-                     "signatureId" : "200017002"
-                  },
-                  {
-                     "signatureId" : "200018018"
-                  },
-                  {
-                     "signatureId" : "200018030"
-                  },
-                  {
-                     "signatureId" : "200018034"
-                  },
-                  {
-                     "signatureId" : "200018035"
-                  },
-                  {
-                     "signatureId" : "200018036"
-                  },
-                  {
-                     "signatureId" : "200018037"
-                  },
-                  {
-                     "signatureId" : "200018039"
-                  },
-                  {
-                     "signatureId" : "200018040"
-                  },
-                  {
-                     "signatureId" : "200018041"
-                  },
-                  {
-                     "signatureId" : "200018042"
-                  },
-                  {
-                     "signatureId" : "200018043"
-                  },
-                  {
-                     "signatureId" : "200018044"
-                  },
-                  {
-                     "signatureId" : "200018045"
-                  },
-                  {
-                     "signatureId" : "200018046"
-                  },
-                  {
-                     "signatureId" : "200018047"
-                  },
-                  {
-                     "signatureId" : "200018048"
-                  },
-                  {
-                     "signatureId" : "200018049"
-                  },
-                  {
-                     "signatureId" : "200018050"
-                  },
-                  {
-                     "signatureId" : "200018051"
-                  },
-                  {
-                     "signatureId" : "200018052"
-                  },
-                  {
-                     "signatureId" : "200018053"
-                  },
-                  {
-                     "signatureId" : "200018054"
-                  }
-               ],
-               "systems" : [],
-               "type" : "manual"
-            }
-         },
-         {
-            "alarm" : true,
-            "block" : true,
-            "learn" : true,
-            "name" : "com-set",
-            "signatureSet" : {
-               "signatures" : [
-                  {
-                     "name" : "dansig"
-                  },
-                  {
-                     "name" : "danzig"
-                  }
-               ],
-               "systems" : [],
-               "type" : "manual"
-            }
-         },
-         {
-            "alarm" : false,
-            "block" : false,
-            "learn" : true,
-            "name" : "another set",
-            "signatureSet" : {
-               "filter" : {
-                  "accuracyFilter" : "le",
-                  "accuracyValue" : "medium",
-                  "attackTypeReference" : {
-                     "link" : "/attack-types/ZaSem-D_13W-D3PCOByRuw?ver=16.1.3",
-                     "name" : "Abuse of Functionality"
-                  },
-                  "hasCve" : "all",
-                  "lastUpdatedFilter" : "all",
-                  "riskFilter" : "le",
-                  "riskValue" : "medium",
-                  "signatureType" : "request",
-                  "tagFilter" : "all",
-                  "userDefinedFilter" : "no"
-               },
-               "systems" : [],
-               "type" : "filter-based"
-            }
-         },
-         {
-            "alarm" : true,
-            "block" : true,
-            "learn" : true,
-            "name" : "danset",
-            "signatureSet" : {
-               "filter" : {
-                  "accuracyFilter" : "ge",
-                  "accuracyValue" : "medium",
-                  "attackTypeReference" : {
-                     "link" : "/attack-types/ZaSem-D_13W-D3PCOByRuw?ver=16.1.3",
-                     "name" : "Abuse of Functionality"
-                  },
-                  "hasCve" : "all",
-                  "lastUpdatedFilter" : "all",
-                  "riskFilter" : "ge",
-                  "riskValue" : "medium",
-                  "signatureType" : "request",
-                  "tagFilter" : "all",
-                  "userDefinedFilter" : "all"
-               },
-               "systems" : [],
-               "type" : "filter-based"
-            }
-         },
-         {
-            "alarm" : true,
-            "block" : true,
-            "learn" : true,
             "name" : "Unix/Linux Signatures (High/Medium Accuracy)",
             "signatureSet" : {
                "filter" : {
@@ -2345,39 +2162,6 @@
                "systems" : [
                   {
                      "name" : "Apache"
-                  }
-               ],
-               "type" : "filter-based"
-            }
-         },
-         {
-            "alarm" : true,
-            "block" : true,
-            "learn" : true,
-            "name" : "User Defined Signature Set Filtered",
-            "signatureSet" : {
-               "filter" : {
-                  "accuracyFilter" : "eq",
-                  "accuracyValue" : "medium",
-                  "attackTypeReference" : {
-                     "link" : "/attack-types/B3HVSe6nB0eoOKQEeFXBJg?ver=16.1.3",
-                     "name" : "Buffer Overflow"
-                  },
-                  "hasCve" : "yes",
-                  "lastUpdatedFilter" : "before",
-                  "lastUpdatedValue" : "2023-04-06",
-                  "riskFilter" : "eq",
-                  "riskValue" : "medium",
-                  "signatureType" : "request",
-                  "tagFilter" : "all",
-                  "userDefinedFilter" : "no"
-               },
-               "systems" : [
-                  {
-                     "name" : "Apache Tomcat"
-                  },
-                  {
-                     "name" : "Apache Struts"
                   }
                ],
                "type" : "filter-based"
