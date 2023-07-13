@@ -1,6 +1,42 @@
 # Policy Supervisor Guide
 *v0.17 June 2023*
 
+# Table of Contents
+- [Policy Supervisor Guide](#policy-supervisor-guide)
+- [Policy Supervisor Overview](#policy-supervisor-overview)
+- [Getting Started](#getting-started)
+  * [Workspaces](#workspaces)
+  * [Direct Conversion using the Conversion Utility](#direct-conversion-using-the-conversion-utility)
+- [Providers](#providers)
+  * [Adding a BIG-IP Provider](#adding-a-big-ip-provider)
+  * [Adding an NGINX Provider](#adding-an-nginx-provider)
+  * [Adding a Distributed Cloud Provider](#adding-a-distributed-cloud-provider)
+  * [Adding and Configuring an Agent: BIG-IP and NGINX](#adding-and-configuring-an-agent--big-ip-and-nginx)
+    + [Download the agent-installer package](#download-the-agent-installer-package)
+    + [Run the installer and configure the agent](#run-the-installer-and-configure-the-agent)
+    + [Complete the setup and agent options](#complete-the-setup-and-agent-options)
+  * [Generating a Distributed Cloud API Token credential](#generating-a-distributed-cloud-api-token-credential)
+  * [Deleting a provider](#deleting-a-provider)
+- [Policies](#policies)
+  * [Importing a Policy from File (BIG-IP, NGINX)](#importing-a-policy-from-file--big-ip--nginx-)
+  * [Ingesting a Policy from a Provider (BIG-IP, NGINX)](#ingesting-a-policy-from-a-provider--big-ip--nginx-)
+  * [Ingesting Policies with DDOS protection and Bot Defense profiles](#ingesting-policies-with-ddos-protection-and-bot-defense-profiles)
+  * [Creating a New Policy from Template](#creating-a-new-policy-from-template)
+  * [Working in the Policy Editor](#working-in-the-policy-editor)
+    + [Syntax validation](#syntax-validation)
+    + [References/Policy IDs](#references-policy-ids)
+  * [Deleting a Policy](#deleting-a-policy)
+- [Policy Conversion and Deployment](#policy-conversion-and-deployment)
+  * [Deploying a policy: Conversion process](#deploying-a-policy--conversion-process)
+  * [Deploying a policy: Deployment of successful conversion](#deploying-a-policy--deployment-of-successful-conversion)
+- [Policy Lifecycle](#policy-lifecycle)
+  * [Conversions](#conversions)
+  * [Deployments](#deployments)
+- [Reports](#reports)
+  * [Report Details](#report-details)
+    + [Conversion Reports](#conversion-reports)
+    + [Deployment Reports](#deployment-reports)
+
 # Policy Supervisor Overview
 
 Policy Supervisor is an online unified configuration solution for
