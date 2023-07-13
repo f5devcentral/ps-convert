@@ -13,8 +13,7 @@ Use this tutorial and the provided sample policies with the `Policy Supervisor <
 
 - **Direct Conversion Utility**: use the `Conversion Utility <https://policysupervisor.io/convert>`_ to quickly perform a direct conversion of a policy from a source WAF format to a target WAF format. Because this approach does not require authentication, your converted Policies are not saved and must be downloaded & deployed/applied manually. 
 
-``For more information and detailed "Getting Started Guide" please refer to the`` `Policy Supervisor User Guide </assets/policy-supervisor-user-guide_v0.14_2.pdf>`_
-
+``For more information and detailed "Getting Started Guide" please refer to the`` `Policy Supervisor User Guide <./guide/README.MD>`_
 
 Supported WAF Solutions
 #####################################
