@@ -73,7 +73,7 @@ Policy Supervisor project simplifies the conversion and management of policies a
 
 **Conversion Utility Workflow**
 --------------------------------
-1. Export a WAF policy from one of the supported providers; alternatively use a sample policy, such as one from `AWAF </big-ip-awaf>`_ or `NAP </nginx-aspp-protect>`_ 
+1. Export a WAF policy from one of the supported providers; alternatively use a sample policy, such as one from `AWAF </big-ip-awaf>`_ or `NAP </nginx-app-protect-waf>`_ 
 2. Go directly into the `Conversion Utility <https://policysupervisor.io/convert>`_ and select the source Provider Type (AWAF or NGINX App Protect), and upload your exported policy file
 3. Select the target (destination) provider type forman to convert the policy into. 
 4. Download the converted policy JSON(s) and import into your WAF solution. NOTE: for F5 Distributed Cloud you can copy + paste the JSON configuration into the corresponding area within the XC Console. 
