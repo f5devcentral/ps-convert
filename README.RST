@@ -62,7 +62,7 @@ Policy Supervisor project simplifies the conversion and management of policies a
 -------------------------------------------
 
 1. Authenticate and log in at `Policy Supervisor <https://policysupervisor.io/>`_
-2. Export a WAF policy from one of the supported providers; alternatively use a sample policy, such as one from `AWAF </big-ip-awaf>`_ or `NAP </nginx-aspp-protect>`_ 
+2. Export a WAF policy from one of the supported providers; alternatively use a sample policy, such as one from `AWAF </big-ip-awaf>`_ or `NAP </nginx-app-protect-waf>`_ 
 3. Import this policy into PS by going into *Policies* -> *Add* -> *Import from File*
 .. figure:: ./assets/02-import.png
 4. From the Context menu for any of the imported policies, select "Convert" and follow the prompts to create a set of Conversions. Use Reports to see the details of the conversion.
