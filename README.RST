@@ -40,7 +40,7 @@ The standard workload within Policy Supervisor supports connecting to and deploy
 
 - `*F5 Distributed Cloud Services* <https://f5.com/waap>`_ (XC): WAF, Bot, DoS
 
-- *BIG-IP Advanced WAF versions v15.1.*, v16.1.*, v17.*: WAF, Bot, DoS
+- *BIG-IP Advanced WAF versions v16.1.*, v17.*: WAF, Bot, DoS
 - *NGINX App Protect WAF releases R27, R28, and R29*: WAF
 
 **Policy Export to File(s)**:
