@@ -80,5 +80,8 @@ Policy Supervisor project simplifies the conversion and management of policies a
 
 *Rinse and Repeat!*
 
-For Any issue or problems with the conversion or either one of the Workstreams, go ahead and `raise an issue <https://github.com/f5devcentral/ps-convert/issues/new>`_ or contact the following email alias: *policysupervisor[AT]f5.com*. Please allow a couple of days for a reply and follow up on your issue. 
+**Support and Enhancements**
+--------------------------------
+
+For Any issues or problems with the conversion or either one of the Workstreams, go ahead and `raise an issue <https://github.com/f5devcentral/ps-convert/issues/new>`_. You can also connect with our team for questions or enhancements by contacting the following email alias: *policysupervisor[AT]f5.com*. Please allow a couple of days for a reply and follow up on your issue. 
     
