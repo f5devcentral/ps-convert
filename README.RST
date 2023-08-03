@@ -78,6 +78,11 @@ Policy Supervisor project simplifies the conversion and management of policies a
 3. Select the target (destination) provider type forman to convert the policy into. 
 4. Download the converted policy JSON(s) and import into your WAF solution. NOTE: for F5 Distributed Cloud you can copy + paste the JSON configuration into the corresponding area within the XC Console. 
 
+**API and Swagger UI**
+--------------------------------
+
+Policy Supervisor is API-first by design. You can retrieve the OpenAPI Spec or use the Swagger UI to make API calls on `the /docs/ page <https://policysupervisor.io/docs/>`_. If using the Swagger UI to perform PS functions, be sure to set the X-Workspace-Key value in the 'Authorize' dialog. This ensures commands are ran against the intended workspace.
+
 *Rinse and Repeat!*
 
 **Support and Enhancements**
