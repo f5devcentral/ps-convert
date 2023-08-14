@@ -3763,10 +3763,6 @@ Connection: close</response_header>
         <set_name>com-set</set_name>
         <set_flg_is_user_defined>1</set_flg_is_user_defined>
         <flg_is_manual>1</flg_is_manual>
-        <sigs>
-          <sig_id name="danzig">300000001</sig_id>
-          <sig_id name="dansig">300000000</sig_id>
-        </sigs>
         <systems/>
       </set>
       <alarm>true</alarm>
@@ -36072,18 +36068,6 @@ Connection: close</response_header>
       <in_staging>true</in_staging>
     </signature>
     <signature signature_id="299999999">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature name="dansig" signature_id="300000000">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature name="danzig" signature_id="300000001">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature name="munduz" signature_id="300000002">
       <enabled>true</enabled>
       <in_staging>true</in_staging>
     </signature>
