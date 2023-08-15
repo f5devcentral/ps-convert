@@ -1,3 +1,4 @@
+
 # Policy Supervisor Guide
 *v0.17 June 2023*
 
@@ -329,7 +330,7 @@ To add a Distributed Cloud provider, complete the following steps.
 Before you can add a BIG-IP or NGINX provider instance in Policy
 Supervisor, you must set up an “Agent” on the private network where the
 provider is running to ensure a secure connection between Policy
-Supervisor and the provider.
+Supervisor and the provider. 
 
 - Ensure you have a machine or VM with Linux OS with an outbound
   connection located on the same network as the BIG-IP or NGINX instance
@@ -460,8 +461,8 @@ agent installation.
     <img src="./media/image26.png"
     style="width:6.26806in;height:0.40069in" />  
       
-    **Note**: For NGINX, you must have generated an ssh public and
-    private key, with the public key placed on your remote Nginx App
+    **Note**: For NGINX, you must generate a root ssh key using the method described in the [ Synchronizing NGINX Configuration in a Cluster guide](https://docs.nginx.com/nginx/admin-guide/high-availability/configuration-sharing/#configure-root-ssh-access-to-the-peers)
+    Using this method, the public key placed on your remote Nginx App
     Protect instance. The private key is located on the Linux machine/VM
     where you are creating the agent. All ssh key and certificate
     details are normally stored in .pem format on the Linux machine. In
@@ -550,7 +551,9 @@ As part of the secret setup, you must first generate an API Token
 credential in the Distributed Cloud console. To generate this token
 credential, complete the following steps.
 
-1.  Log on to the *F5 Distributed Cloud UI*.
+**Note**: At this time, the user account for which an API Token is generated must have ves-io-admin role on all application namespaces, including system.
+
+1.  Log on to the *F5 Distributed Cloud UI*. 
 
 2.  Go to your *User Account* menu and click **Account Settings**.  
     <img src="./media/image32.png" style="width:6.26806in;height:3.16458in"
