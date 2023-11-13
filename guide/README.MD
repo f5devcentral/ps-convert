@@ -495,6 +495,13 @@ agent installation.
 When you have downloaded and run the *agent-installer*, there are some
 additional setup options to complete for the agent installation.
 
+For adding BIG-IP providers, ensure connectivity between the agent host 
+and the BIG-IP's management IP on TCP port 443 (HTTPS) or TCP port 8443 
+for single-NIC BIG-IP VE.
+
+For adding NGINX providers, ensure connectivity between the 
+agent host and the NGINX instance on TCP port 22 (SSH)
+
 1.  The following setup options are displayed:  
       
     Finish  
